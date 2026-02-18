@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Student Fee Payment</title>
+<style>
+body{font-family:system-ui,Arial,sans-serif;background:#f6f7fb;margin:0;padding:0}
+.wrap{max-width:760px;margin:40px auto;background:#fff;padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+h1{margin:0 0 8px}
+.sub{color:#555;margin:0 0 24px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font-weight:600}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid #d9dbe3;border-radius:10px}
+.full{grid-column:1 / -1}
+.btn{display:inline-block;background:#0d6efd;color:#fff;border:none;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
+.row{display:flex;gap:12px;align-items:center}
+.note{font-size:13px;color:#666}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Fee Payment</h1>
+<p class="sub">Fill details and proceed. (Demo simulates online payment)</p>
+
+
+<form action="process_payment.php" method="post" novalidate>
+<div>
+<label>College ID *</label>
+<input type="text" name="college_id" required maxlength="30" placeholder="e.g., 23CS1001" />
+</div>
+<div>
+<label>Student Name *</label>
+<input type="text" name="student_name" required maxlength="100" />
+</div>
+
+
+<div>
+<label>Course *</label>
+<select name="course" required>
+<option value="">-- Select --</option>
+<option>B.Tech CSE</option>
+<option>BCA</option>
+<option>B.Sc IT</option>
+<option>MCA</option>
+</select>
+</div>
+
+
+<div>
+<label>Semester *</label>
+<select name="semester" required>
+<option value="">-- Select --</option>
+<option>Sem 1</option>
+<option>Sem 2</option>
+<option>Sem 3</option>
+<option>Sem 4</option>
+<option>Sem 5</option>
+<option>Sem 6</option>
+<option>Sem 7</option>
+<option>Sem 8</option>
+</select>
+</html>
